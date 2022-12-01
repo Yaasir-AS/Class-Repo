@@ -1,6 +1,6 @@
 [functions]
   node_bundler = "esbuild"
-  directory = "functions/"
+  directory = "netlify/functions/"
   included_files = ["./db/**.json"]
 
 [dev]
