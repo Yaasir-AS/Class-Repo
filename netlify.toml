@@ -1,16 +1,16 @@
 [functions]
   node_bundler = "esbuild"
-  directory = ".netlify/functions/"
+  directory = "/.netlify/functions/"
   included_files = ["./db/**.json"]
 
 [dev]
   port = 3000
   publish = "dist"
 
-#  [[redirects]]
-#  from = "/api/todos"
-#  to = "/.netlify/functions/todos"
-#  status = 200
+[[redirects]]
+  from = "/api/todos"
+  to = "/.netlify/functions/todos"
+  status = 200
 
 #  [[redirects]]
 #  from = "/"
