@@ -17,6 +17,8 @@ async function getToDos(){
 
     const data = await res.json()
     console.log(data)
+
+    data.forEach(item=> console.log(item))
     //document.querySelector('#tagline').textContent = data.path
 }
 
