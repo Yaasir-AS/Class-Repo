@@ -10,10 +10,14 @@
 */
 
 async function getToDos(){
-    const url = '/.netlify/functions/todos'
-    const res = await fetch(url)
-    const data = await res.json
-    document.querySelector('#tagline').textContent = data.path
+
+    //GET Request
+    const res = await fetch('/.netlify/functions/todos')
+    console.log(res)
+
+    const data = await res.json()
+    console.log(data)
+    //document.querySelector('#tagline').textContent = data.path
 }
 
 getToDos()

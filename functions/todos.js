@@ -9,11 +9,16 @@
       }
 
 */
+import path from 'path'
+import fs from 'fs/promises'
 
 export async function handler(event, context){
-
-    return {
-         statusCode:200,
-         body: JSON.stringify({path:"/db/todos"})
-    }
+  const filePath = path.resolve('./db/todos.json')
+  // stream buffer
+  const data = await fs.readFile(filePath, "utf-8")
+  console.log(data)
+  return {
+    statusCode: 200,
+    body: data
+  }
 }
