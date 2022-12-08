@@ -4,17 +4,39 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Juggler</title>
     <link rel="stylesheet" href="/src/css/index.css">
-    <script type="module" src="/src/js/index.js"></script>
+    <script type="module" src="/src/js/index.js" defer></script>
   </head>
-  <body class="flex justify-center items-center bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-purple-400 to-yellow-400 bg-repeat-x h-[100vh]">
-    <header class="bg-white/40 text-center p-10 rounded-full shadow-lg shadow-gray-900/20">
-      <h1 class="text-3xl font-semibold">Juggler To Do App</h1>
-      <p id="tagline">...loading</p>
-    </header>
-    <main>
-      <svg class="fill-red-500 w-20 h-20" stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-    </main>
+  <body class="bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-purple-400 to-yellow-400 bg-repeat-x h-[100vh]  min-h-screen">
+    <nav class="p-4">
+      <ul class="flex justify-between">
+        <li>
+          <svg class="w-8 fill-white/90" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+           <path fill="none" d="M0 0h24v24H0z"></path><path d="M12.87 11.81A2.5 2.5 0 0115 8h1c1.51 0 2-1 2-1s.55 6-3 6c-.49 0-.94-.14-1.32-.38-.24.64-.59 1.76-.76 2.96 1.26.22 2.28.89 2.77 1.77A6.505 6.505 0 0018.5 12h3c0 5.24-4.26 9.5-9.5 9.5S2.5 17.24 2.5 12 6.76 2.5 12 2.5V0l4 4-4 4V5.5c-3.58 0-6.5 2.92-6.5 6.5 0 2.21 1.11 4.17 2.81 5.35.51-.92 1.63-1.62 2.98-1.8-.09-.69-.26-1.42-.49-2.03-.35.3-.8.48-1.3.48-1.1 0-2-.9-2-2v-.99c0-.56-.19-1.09-.5-1.51 0 0 4.45-.23 4.5 2.5 0 .29-.06.56-.17.8-.42-.32-.86-.6-1.33-.8.58.43 1.37 1.37 2 2.6.67-1.62 1.68-3.27 3-4.6-.76.52-1.47 1.12-2.13 1.81z"></path>
+          </svg></li>
+        <li>
+          <svg class="w-8 h-8 fill-white/90" viewBox="0 0 512 512"  xmlns="http://www.w3.org/2000/svg">
+            <path d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"></path>
+          </svg>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="h-[80vh-64px] flex justify-center items-center">
+      <header class="text-center">
+
+        <h1 class="text-8xl font-extrabold text-slate-900/90">Juggler</h1>
+        <p class="text-slate-800/60 text-3xl font-semibold">manage your task list</p>
+        <a class="inline-block bg-blue-800/50 text-white text-xl font-bold py-2 px-8 my-8 rounded-md" href="todo.html">get started for free</a>
+
+        <ul>
+          <li class="text-white/80 font-bold"><h2>Free Account</h2></li>
+          <li class="text-white/80 font-light">No credit card required.</li>
+          <li class="text-white/80 font-light">No personal data requred.</li>
+          <li class="text-white/80 font-light">No trial account set up.</li>
+        </ul>
+      </header>
+    </div>
   </body>
 </html>
