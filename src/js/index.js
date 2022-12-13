@@ -1,25 +1,18 @@
-/* 
-      Make a connection between client ---- server (Netlify cloud function)
-      fetch(url)
+import { categoryTemplates } from "./templates/categories";
 
-      PATH TO ALL OF YOUR FUNCTIONS 
-      Docs for any service tell how access the function cloud function
-      from the client(web browser) (firebase iOS/Android/Web/Unity) 
-      /.netlify/functions/fn(name)
-      /.netlify/functions/todos  path  route   function
-*/
+// init app, load data, loop data, create the To-Dos and send them to the DOM
 
-async function getToDos(){
-
-    //GET Request
-    const res = await fetch('/.netlify/functions/todos')
-    console.log(res)
-
-    const data = await res.json()
-    console.log(data)
-
-    data.forEach(item=> console.log(item))
-    //document.querySelector('#tagline').textContent = data.path
+async function appInit(){
+    const res = await fetch('.netlify/functions/todos')
+    const todos = await res.json()
+    const containerElement = document.createElement('div')
+    let markup = ``
+    todos.forEach(todo =>{
+        const template = categoryTemplates[todo.category](todo)
+        markup += template
+    })
+    containerElement.innerHTML = markup
+    document.querySelector('main').append(containerElement)
 }
 
-getToDos()
+appInit()
